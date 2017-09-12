@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bookmarker</title>
+	<link rel="icon" href="icon.png" type="image/x-icon">
+
+	<link rel="stylesheet" href= "style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<!--Navbar-->
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">
+	<b style="color: #563D7C">Bookmarker</b><img src="icon.png" width="30px" class="mx-2"></a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#about">About <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button type="button" class="btn btn-outline-danger my-2 my-sm-0" data-toggle="modal" data-target="#resetData">
+      Reset</button>
+    </form>
+  </div>
+</nav>
+
+
+
+<div class="container my-3">
+
+	<div id="divOne"  class="jumbotron">
+		<h2 class="text-center">Bookmark your favorite sites</h2>
+			<form>
+			<input type="text" id="siteName" placeholder="Site Name" class="form-control my-3 col-md-8 mx-auto">
+			<input type="text" id="siteURL" placeholder="Site URL" class="form-control my-3 col-md-8 mx-auto">
+			<p class="text-center"><button type="submit" id="button" class="btn btn-success">Add Site</button></p>
+			</form>	
+	</div>
+
+	<div id="alert"></div>
+			
+	<div id="divTwo" class=""></div>
+
+
+	<!-- Modal: About -->
+	<div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title text-center" id="exampleModalLongTitle"><b style="color: #563D7C">Bookmarker</b><img src="icon.png" width="30px" class="mx-2"></h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body text-justify">
+	        Version: 1.0.0
+	        <br>
+	        Developer: Md Sadiqur Rahman
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+	<!-- Modal: Reset -->
+	<div class="modal fade" id="resetData" tabindex="-1" role="dialog" aria-labelledby="resetTitle" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="resetTitle" style="color: red">Warning!!!</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        This will remove all items from the list. 
+	        <br>
+	        Do you want to proceed?
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
+	        <button type="button" class="btn btn-outline-danger" data-dismiss="modal" id="reset">Yes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+
+</div>
+
+	<script type="text/javascript" src = "script.js"></script>
+</body>
+</html>
+
